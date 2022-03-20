@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+
+    font-family: Arial;
+    background-color: #333;
+    color: white;
+    
+}
+
+.mainCanvas {
+
+    background-image: url(/img/asfalt-light.png);
+    margin: 5px 115px;
+    height: 850px;
+}
+/* NavBar */
+/* --------------------------------------------------------------- */
+.navbar {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+}
+
+.navbarLogo 
+{
+    margin-right: 50px;
+}
+.navbarItem {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 75px;
+    width: 75px;
+
+    float: left;
+    margin: 5px 50px;
+    padding: 5px 50px;
+}
+
+.navbar a {
+
+    color: white;
+}
+
+.navbar a:hover:visited {
+
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.navbar a:hover {
+    
+    background-color: white;
+    color: black;
+}
+
+.navbar a:visited {
+
+    color: white;
+}
+/* --------------------------------------------------------------- */
+
+
+/* Quick Order Options */
+/* --------------------------------------------------------------- */
+
+.startOrder 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+}
+
+
+.orderOption {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 50px;
+    margin: 100px;
+
+    color: black;
+    background-color: red;
+
+}
+
+.orderOption:hover 
+{
+    background: white;
+}
+/* --------------------------------------------------------------- */
+
+
+/* Menu */
+/* --------------------------------------------------------------- */
+
+.menu {
+
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    flex-wrap: wrap;
+
+    color: black;
+
+}
+
+.menuItem {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+
+    background-color: #f2f2f2;
+
+}
+
+.menuItemOrder {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 175px;
+    height: 50px;
+    float: left;
+
+    background-color: red;
+    color: black;
+    
+}
+
+.menuItemOrder:hover
+{
+    background-color: rgba(255, 0, 0, 0.3);
+}
+/* --------------------------------------------------------------- */
+
+
+/* Footer */
+/* --------------------------------------------------------------- */
+
+.footer {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 200px;
+}
+
+
+
+
