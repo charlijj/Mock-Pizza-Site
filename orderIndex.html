@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .mainOrderCanvas {
+
+        
+        background-color: white;
+        color: black;
+        margin: 0 115px;
+        height: 800px;
+
+        position: relative;
+
+        }
+
+        /* Div for pizza Dropbox's*/
+        .pizzaSelectContainer {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: large;
+            font-weight: bold;
+
+            height: 15%;
+            width: 100%;
+
+            overflow-x: hidden;
+
+        }
+
+        /* Div of Dropbox for pizza type */
+        .pizzaSelectType {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            margin: 0 10%;
+        }
+
+        /* Div of Dropbox for Size */
+        .pizzaSelectSize {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            margin: 0 10%;
+
+        }
+
+        /* Dropbox properties */
+        .pizzaSelect {
+
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+
+            font-size: large;
+            text-align: center;
+        }
+
+        .pizzaSelectDelivery {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            height: 10%;
+            width: 100%;
+
+            margin: 0px 100px;
+
+            overflow-x: hidden;
+        }
+
+        .pizzaSelectDeliveryOption {
+            text-align: center;
+            margin-top: 10px;
+
+        }
+
+        .deliveryInfo {
+
+            width: 100%;
+            height: 15%;
+            text-align: center;
+            margin-top: 40px;
+
+            overflow-x: hidden;
+
+        }
+
+        .deliveryInfoBox {
+
+            margin: 10px 25px 0px 2px;
+        }
+
+        .deliveryInfoSelect {
+
+            margin: 10px 25px 0px 2px;
+        }
+
+        .orderNow {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            height: 20%;
+        }
+
+        .orderNowButton {
+
+            width: 500px;
+            height: 75px;
+
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid black;
+            background-color: red;
+            font-size: xx-large;
+        }
+
+        .orderNowButton:hover {
+
+            background-color: rgb(255, 122, 122);
+        }
+
+    </style>
+    <title>pizza.com</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="navbarLogo"><img src="/img/dominos-pizza-png-logo.png" alt="dominos-pizza-png-logo"></a>
+        <a href="orderIndex.html"><div class="navbarItem">Order</div></a>
+        <a href="#"><div class="navbarItem">Menu</div></a>
+        <a href="#"><div class="navbarItem">Cart</div></a>
+    </div>
+
+    
+    <div class="mainOrderCanvas">
+
+        <h1 class="header">Order</h1>
+        <hr>
+        <div class="header"><h3>Delivery Option</h3></div>
+        <div class="pizzaSelectDeliveryOption">
+            <span>Delivery</span>
+            <input type="Radio" name="orderOption" value="delivery" checked id="orderOptionDelivery">
+            <span style="margin-left: 150px;">Pick-up</span>
+            <input type="Radio" name="orderOption" value="pick-up" id="orderOptionPickup">
+        </div>
+
+        <hr>
+        
+        <div class="header"><h3>Pizza Options</h3></div>
+        <div class="pizzaSelectContainer">
+            <div class="pizzaSelectType">
+                <p>Pizza Type</p>
+                <select name="pizzaType" class="pizzaSelect" id="pizzaTypeSelect">
+                    <option value="Pepperoni">Pepperoni</option>
+                    <option value="Hawaiian ">Hawaiian </option>
+                    <option value="Meat-lover">Meat Lover</option>
+                    <option value="Veggie-lover">Veggie Lover</option>
+                    <option value="Cheese">Cheese</option>
+                    <option value="Canadian">Canadian</option>
+                </select>
+            </div>
+    
+            <div class="pizzaSelectSize">
+                <p>Size</p>
+                <select name="pizzaSize" class="pizzaSelect" id="pizzaSizeSelect"> 
+                    <option value="X-Large">Extra Large</option>
+                    <option value="Large">Large</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Small">Small</option>
+                    <option value="Personal">Personal</option>
+                </select>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="header"><h3>Delivery Information</h3></div>
+        <div class="deliveryInfo">
+
+            <span>Phone:</span>
+            <input type="text" id="phone" class="deliveryInfoBox">
+            <span>Name:</span>
+            <input type="text" id="name" class="deliveryInfoBox">
+            <div class="break"></div>
+            <span>Address:</span>
+            <input type="text" id="address" class="deliveryInfoBox">
+            <span>Province:</span>
+            <select name="provinceSelect" id="provinceSelect" class="deliveryInfoSelect">
+                <option value="BC">BC</option>
+                <option value="BC">AB</option>
+                <option value="BC">SK</option>
+                <option value="BC">MA</option>
+                <option value="BC">ON</option>
+                <option value="BC">QB</option>
+            </select>
+            <span>City:</span>
+            <input type="text" id="city" class="deliveryInfoBox">  
+       
+            
+        </div>
+
+        <hr>
+    
+        <div class="orderNow">
+            <button class="orderNowButton" id="submitOrderButton" onclick="submitOrder()">Submit Order</button>
+        </div>
+            
+
+
+    </div>
+
+    <script src="/script/script.js"></script>
+    
+</body>
+</html>

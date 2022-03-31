@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-  }
+
 
 body {
 
@@ -12,10 +10,21 @@ body {
 
 .mainCanvas {
 
+    display: block;
+    
     background-image: url(/img/asfalt-light.png);
-    margin: 5px 115px;
-    height: 850px;
+    margin: 0 115px;
+    height: 750px;
+    position: absolute;
+
 }
+
+.header {
+
+    text-align: center;
+    padding-top: 15px;
+}
+
 /* NavBar */
 /* --------------------------------------------------------------- */
 .navbar {
@@ -45,7 +54,7 @@ body {
 
     float: left;
     margin: 5px 50px;
-    padding: 5px 50px;
+    padding: 0 50px;
 }
 
 .navbar a {
@@ -164,10 +173,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
+
+    position: relative;
+
     height: 200px;
 }
 
+.break {
+
+    height: 35px;
+
+}
 
 
 

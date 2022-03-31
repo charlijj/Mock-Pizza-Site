@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .mainOrderCanvas {
+            background-color: white;
+            color: black;
+            margin: 0 115px;
+            height: 800px;
+        }
+
+        .orderInformation {
+
+            
+           display: flex;
+           align-items: center;
+           justify-content: center;
+
+           height: 75%;
+  
+           
+        }
+
+        .orderInformationTable {
+
+            text-align: center;
+
+        }
+
+        .submitOrder {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            height: 15%;
+        }
+
+        .submitOrderButton {
+
+            width: 300px;
+            height: 40px;
+
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid black;
+            background-color: red;
+            font-size: x-large;
+        }
+
+        .submitOrderButton:hover {
+
+            background-color: rgb(255, 122, 122);
+        }
+
+        
+
+
+    </style>
+    <title>Order Confirmation</title>
+</head>
+<body onload="loadBuild()">
+    <div class="navbar">
+        <a href="index.html" class="navbarLogo"><img src="/img/dominos-pizza-png-logo.png" alt="dominos-pizza-png-logo"></a>
+        <a href="orderIndex.html"><div class="navbarItem">Order</div></a>
+        <a href="#"><div class="navbarItem">Menu</div></a>
+        <a href="#"><div class="navbarItem">Cart</div></a>
+    </div>
+    
+    <div class="mainOrderCanvas" id="canvas">
+
+        <div class="header"><h2>Order Confirmation</h2></div>
+
+        <hr>
+
+
+        <div class="orderInformation">
+
+            <table class="orderInformationTable">
+
+                <tr>
+                    <th>Name: </th>
+                    <td><p id="nameConf"></p></td>
+                </tr>
+                <tr>
+                    <th>Phone: </th>
+                    <td><p id="phoneConf"></p></td>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <td><p id="addressConf" style="margin-right: 30px;"></p></td>
+                </tr>
+                <tr>
+                    <th>Province:</th>
+                    <td><p id="provinceConf" style="margin-right: 30px;"></p></td>
+                </tr>
+                <tr>
+                    <th>City:</th>
+                    <td><p id="cityConf"></p></td>
+                </tr>
+                <tr>
+                    <th>Delivery Option:</th>
+                    <td ><p id="deliveryConf"></p></td>
+                </tr>
+                <tr>
+                    <th>Pizza Type:</th>
+                    <td><p id="pizzaTypeConf"></p></td>
+                </tr>
+                <tr>
+                    <th>Pizza Size:</th>
+                    <td><p id="pizzaSizeConf"></p></td>
+                </tr>
+                <tr>
+                    <th>Delivery Cost:</th>
+                    <td><p id="deliveryCost"></p></td>
+                </tr>
+                <tr>
+                    <th>Before Tax:</th>
+                    <td><p id="costBTConf"></p></td>
+                </tr>
+                <tr>
+                    <th>Tax:</th>
+                    <td><p id="taxConf"></p></td>
+                </tr>
+                <tr>
+                    <th>Total Cost:</th>
+                    <td><p id="costATConf"></p></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="submitOrder">
+            <button class="submitOrderButton" onclick="orderSubmitted()">Submit Order</button>
+        </div>
+
+    </div>
+
+    <script src="/script/script.js"></script>
+
+    <script>
+
+
+
+    </script>
+
+
+</body>
+</html>

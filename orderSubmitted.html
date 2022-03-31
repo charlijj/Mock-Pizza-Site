@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+
+        .mainOrderCanvas {
+            background-color: white;
+            color: black;
+            margin: 0 115px;
+            height: 800px;
+        }
+
+        .continueOptions {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: auto;
+            height: 75%;
+            
+        }
+
+        .continueOptionButton {
+
+            width: 400px;
+            height: 200px;
+
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid black;
+            background-color: red;
+            font-size: x-large;
+
+            margin: 0 5%;
+        }
+
+        .continueOptionButton:hover {
+
+            background-color: rgb(255, 122, 122);
+        }
+
+        .estimatedTime {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body onload="estimatedTime()">
+
+    <div class="navbar">
+        <a href="index.html" class="navbarLogo"><img src="/img/dominos-pizza-png-logo.png" alt="dominos-pizza-png-logo"></a>
+        <a href="orderIndex.html"><div class="navbarItem">Order</div></a>
+        <a href="#"><div class="navbarItem">Menu</div></a>
+        <a href="#"><div class="navbarItem">Cart</div></a>
+    </div>
+    
+    <div class="mainOrderCanvas" id="canvas">
+
+        <div class="header"><h1>Order Submitted</h1></div>
+
+        <hr>
+
+        <div class="estimatedTime">
+            <p><strong>Your order will be ready in appoximitly: &nbsp</strong></p>
+            <p id="estimatedTime"></p>
+        </div>
+        
+
+        <div class="continueOptions">
+            <button class="continueOptionButton" onclick="backHome()">Back Home</button>
+            <button class="continueOptionButton" onclick="orderAgain()">Order Again</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        function backHome () {
+
+            window.location.href = `index.html`; 
+        }
+
+        function orderAgain () {
+
+            window.location.href = `orderIndex.html`; 
+        }
+    </script>
+
+    <script src="/script/script.js"></script>
+    
+</body>
+</html>
