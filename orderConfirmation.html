@@ -10,8 +10,9 @@
         .mainOrderCanvas {
             background-color: white;
             color: black;
-            margin: 0 115px;
+            margin: 20px 115px;
             height: 800px;
+
         }
 
         .orderInformation {
@@ -21,7 +22,7 @@
            align-items: center;
            justify-content: center;
 
-           height: 75%;
+           height: 80%;
   
            
         }
@@ -38,7 +39,7 @@
             align-items: center;
             justify-content: center;
             
-            height: 15%;
+            height: 10%;
         }
 
         .submitOrderButton {
@@ -65,11 +66,12 @@
     <title>Order Confirmation</title>
 </head>
 <body onload="loadBuild()">
+    
     <div class="navbar">
-        <a href="index.html" class="navbarLogo"><img src="/img/dominos-pizza-png-logo.png" alt="dominos-pizza-png-logo"></a>
+        <a href="index.html" class="navbarLogo"><img src="/img/icon.png" alt="icon"></a>
         <a href="orderIndex.html"><div class="navbarItem">Order</div></a>
-        <a href="#"><div class="navbarItem">Menu</div></a>
-        <a href="#"><div class="navbarItem">Cart</div></a>
+        <a href="menuIndex.html"><div class="navbarItem">Menu</div></a>
+        <a href="aboutIndex.html"><div class="navbarItem">About</div></a>
     </div>
     
     <div class="mainOrderCanvas" id="canvas">
@@ -116,7 +118,7 @@
                     <td><p id="pizzaSizeConf"></p></td>
                 </tr>
                 <tr>
-                    <th>Delivery Cost:</th>
+                    <th>Delivery Fee:</th>
                     <td><p id="deliveryCost"></p></td>
                 </tr>
                 <tr>

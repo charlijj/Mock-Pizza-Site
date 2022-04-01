@@ -4,39 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/script/script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Pizza.com</title>
+    <title>Menu</title>
+    <style>
 
+        .menuItem {
+
+            display: flex;
+            align-items:flex-end;
+            justify-content: center;
+            flex-direction: row-reverse;
+
+
+            width: 200px;
+            height: 150px;
+            margin: 0 20px 5px 20px;
+        }
+
+    </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<!-- ----------------------------------------------------------------------------------------------- -->
+    
     <div class="navbar">
         <a href="index.html" class="navbarLogo"><img src="/img/icon.png" alt="icon"></a>
         <a href="orderIndex.html"><div class="navbarItem">Order</div></a>
         <a href="menuIndex.html"><div class="navbarItem">Menu</div></a>
         <a href="aboutIndex.html"><div class="navbarItem">About</div></a>
     </div>
- <!-- ----------------------------------------------------------------------------------------------- -->
-
-
- <!-- Main -->
- <!-- ----------------------------------------------------------------------------------------------- -->
 
     <div class="mainCanvas">
-        <div class="banner">
-            <img src="img/banner.png" alt="banner">
-        </div>
-        <div class="startOrder">
-            <a href="orderIndex.html"><div class="orderOption"><h3>Order Delivery</h3></div></a>
-            <a href="orderIndex.html"><div class="orderOption"><h3>Order Takeout</h3></div></a>
-            
-        </div>
 
-<!-- Menu -->
-<!-- ----------------------------------------------------------------------------------------------- -->
+        <h1 class="header">Menu</h1>
+
+        <hr>
 
         <div class="menu">
 
@@ -45,6 +45,8 @@
                 <div class="menuItem" id="pepperoni">
                     <a href="orderIndex.html"><div class="menuItemOrder"><strong>Order Now</strong></div></a>
                 </div>
+                <p>Medium for $12</p>
+                
             </div>
 
             <div class="menuItemInfo">
@@ -52,6 +54,8 @@
                 <div class="menuItem" id="hawaiian">
                     <a href="orderIndex.html"><div class="menuItemOrder"><strong>Order Now</strong></div></a>
                 </div>
+                <p>Medium for $12</p>
+                
             </div>
 
 
@@ -60,6 +64,7 @@
                 <div class="menuItem" id="canadian">                   
                     <a href="orderIndex.html"><div class="menuItemOrder"><strong>Order Now</strong></div></a>
                 </div>
+                <p>Medium for $16</p>
             </div>
 
 
@@ -68,13 +73,15 @@
                 <div class="menuItem" id="cheese">
                     <a href="orderIndex.html"><div class="menuItemOrder"><strong>Order Now</strong></div></a>
                 </div>
+                <p>Medium for $12</p>
             </div>
-            
-            <div class="menuItemInfo">
+
+            <div class="menuItemInfo" style="margin-top: 50px;">
                 <p class="lable">Veggie Lover</p>
                 <div class="menuItem" id="veggieLover">
                     <a href="orderIndex.html"><div class="menuItemOrder"><strong>Order Now</strong></div></a>
                 </div>
+                <p>Medium for $16</p>
             </div>
 
             <div class="menuItemInfo">
@@ -82,6 +89,7 @@
                 <div class="menuItem" id="meatLover">
                     <a href="orderIndex.html"><div class="menuItemOrder"><strong>Order Now</strong></div></a>
                 </div>
+                <p>Medium for $16</p>
             </div>
 
             <div class="menuItemInfo">
@@ -89,16 +97,10 @@
                 <div class="menuItem" id="bigPoppa">
                     <a href="orderIndex.html"><div class="menuItemOrder"><strong>Order Now</strong></div></a>
                 </div>
+                <p>Medium for $19</p>
             </div>
 
 
-<!-- End of Menu -->
-<!-- ----------------------------------------------------------------------------------------------- -->
     </div>
-<!-- End of Main -->
- <!-- ----------------------------------------------------------------------------------------------- -->
-
-
-
 </body>
 </html>

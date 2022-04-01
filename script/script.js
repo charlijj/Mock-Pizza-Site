@@ -13,7 +13,6 @@ const buildOrderConf = new Event(`build`);
 document.addEventListener(`build`, function () {orderConfirmation();});
 
 
-
 function submitOrder() {
 
     let error = false;
@@ -76,6 +75,9 @@ function calculatePrice () {
         case `Canadian`:
             pizzaPrice = 7;
             break;
+        case `Big Poppa Pizza`:
+            pizzaPrice = 9;
+            break;
         default:
             pizzaPrice = 6;
             break;
@@ -104,6 +106,7 @@ function calculatePrice () {
     {
         deliveryCost = 4;
     }
+    
     costBT = costBT + deliveryCost;
     tax = costBT * taxRate;
     costAT = costBT + tax;

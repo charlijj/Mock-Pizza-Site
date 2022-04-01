@@ -1,28 +1,74 @@
 
+#pepperoni {
+
+    background-image: url(img/pepperoni.jpg);
+    background-repeat: no-repeat;
+}
+#canadian {
+
+    background-image: url(img/canadian.jpg);
+    background-repeat: no-repeat;
+}
+
+#hawaiian {
+
+    background-image: url(img/hawaiian.jpg);
+    background-repeat: no-repeat;
+}
+
+#cheese {
+
+    background-image: url(img/pepperoni.jpg);
+    background-repeat: no-repeat;
+}
+
+#veggieLover {
+
+    background-image: url(img/veggieLovers.jpg);
+    background-repeat: no-repeat;
+}
+
+#meatLover {
+
+    background-image: url(img/meatLovers.jpg);
+    background-repeat: no-repeat;
+}
+
+#bigPoppa {
+
+    background-image: url(img/bigPoppa.jpg);
+    background-repeat: no-repeat;
+}
+
 
 body {
 
     font-family: Arial;
     background-color: #333;
-    color: white;
+    color: black;
     
 }
 
 .mainCanvas {
 
-    display: block;
-    
     background-image: url(/img/asfalt-light.png);
-    margin: 0 115px;
-    height: 750px;
-    position: absolute;
-
+    margin: 20px 115px;
+    height: 800px;
 }
 
 .header {
 
     text-align: center;
     padding-top: 15px;
+    
+}
+
+.lable {
+
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+    width: 200px;
 }
 
 /* NavBar */
@@ -33,7 +79,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 75px;
-    overflow: hidden;
+
     background-color: #333;
     position: sticky;
     top: 0;
@@ -41,8 +87,15 @@ body {
 
 .navbarLogo 
 {
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
 }
+
 .navbarItem {
 
     display: flex;
@@ -88,7 +141,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 30px;
+
 }
 
 
@@ -97,19 +150,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
     width: 200px;
     height: 50px;
-    margin: 100px;
+    margin: 0 20px 20px 20px ;
+    float: left;
 
     color: black;
+    border: 1px solid rgba(0, 0, 0, 0.8);;
     background-color: red;
 
 }
 
+
 .orderOption:hover 
 {
-    background: white;
+    background: rgba(255, 0, 0, 0.6);
 }
 /* --------------------------------------------------------------- */
 
@@ -131,16 +188,27 @@ body {
 .menuItem {
 
     display: flex;
-    align-items: center;
+    align-items:flex-end;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    
 
     width: 200px;
-    height: 200px;
-    margin: 20px;
+    height: 150px;
+    margin: 0 20px 80px 20px;
 
     background-color: #f2f2f2;
+}
 
+.menuItemInfo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin: 0;
 }
 
 .menuItemOrder {
@@ -148,12 +216,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
     width: 175px;
     height: 50px;
     float: left;
-
-    background-color: red;
+    border: 1px solid rgba(0, 0, 0, 0.8);;
+    background-color: rgba(255, 0, 0, 0.8);
     color: black;
     
 }
@@ -165,24 +234,9 @@ body {
 /* --------------------------------------------------------------- */
 
 
-/* Footer */
-/* --------------------------------------------------------------- */
+.banner {
 
-.footer {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-
-    height: 200px;
-}
-
-.break {
-
-    height: 35px;
-
+    text-align: center;
 }
 
 
