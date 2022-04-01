@@ -51,7 +51,7 @@ body {
 
 .mainCanvas {
 
-    background-image: url(/img/asfalt-light.png);
+    background-image: url(/img/background.png);
     margin: 20px 115px;
     height: 800px;
 }
@@ -237,6 +237,35 @@ body {
 .banner {
 
     text-align: center;
+}
+
+.footer {
+
+    bottom: 0;
+    color: white;
+
+}
+
+.contactInfo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contactInfoItem {
+
+    margin: 30px 5%;
+}
+
+.footer a {
+
+    color: white;
+}
+.footer a:visited {
+
+    color: white;
 }
 
 
