@@ -1,4 +1,6 @@
+// By Jasper Charlinski
 
+// DOM elements for user input
 const deliveryOptionDelivery = document.getElementById(`orderOptionDelivery`);
 const deliveryOptionPickup = document.getElementById(`orderOptionPickup`);
 const pizzaTypeSelect = document.getElementById(`pizzaTypeSelect`);
@@ -8,11 +10,14 @@ const phoneInput = document.getElementById(`phone`);
 const cityInput = document.getElementById(`city`);
 const provinceInput = document.getElementById(`provinceSelect`);
 const nameInput = document.getElementById(`name`);
+const tipOption = document.getElementById(`tip`);
 
+// Custom event that builds order confirmation table 
 const buildOrderConf = new Event(`build`);
 document.addEventListener(`build`, function () {orderConfirmation();});
 
-
+// This function gets the information from the DOM elements for user input and sets the value to a local storage variable
+// If information has been filled out correctly, the order confirmation page will be called
 function submitOrder() {
 
     let error = false;
@@ -35,12 +40,12 @@ function submitOrder() {
     localStorage.setItem(`phoneVal`, phoneInput.value);
     localStorage.setItem(`cityVal`, cityInput.value);
     localStorage.setItem(`provinceVal`, provinceInput.value);
-   
-    provenceVal = provinceInput.value;
+
+    localStorage.setItem(`tipOption`, tipOption.value);
 
     if ((localStorage.getItem(`nameVal`)==``) || (localStorage.getItem(`addressVal`)==``) || (localStorage.getItem(`phoneVal`)==``) || (localStorage.getItem(`cityVal`)==``))
     {
-        alert(`Delivery information can't be left blank`)
+        alert(`Delivery information can not be left blank`)
         error = true;
     }
 
@@ -49,9 +54,9 @@ function submitOrder() {
         window.location.href = `orderConfirmation.html`; 
         calculatePrice();  
     }
-   
 }
 
+// This function calculates the cost of the order based on the pizza type, size, and delivery option.
 function calculatePrice () {
 
     const taxRate = 0.14;
@@ -60,6 +65,7 @@ function calculatePrice () {
     let tax;
     let costAT;
     let deliveryCost = 0;
+    let tip = localStorage.getItem(`tipOption`);
     let deliveryOption = localStorage.getItem(`deliveryOption`);
     let pizzaType = localStorage.getItem(`pizzaType`);
     let pizzaSize = localStorage.getItem(`pizzaSize`);
@@ -86,19 +92,18 @@ function calculatePrice () {
     switch (pizzaSize) {
 
         case `X-Large`:
-            costBT = pizzaPrice * 4;
+            pizzaPrice = pizzaPrice * 4;
             break;
         case `Large`:
-            costBT = pizzaPrice * 3;
+            pizzaPrice = pizzaPrice * 3;
             break;
         case `Medium`:
-            costBT = pizzaPrice * 2;
+            pizzaPrice = pizzaPrice * 2;
             break;
         case `Small`:
-            costBT = pizzaPrice * 1.5;
+            pizzaPrice = pizzaPrice * 1.5;
             break;
         case `Personal`:
-            costBT = pizzaPrice;
             break;
     }
 
@@ -107,21 +112,24 @@ function calculatePrice () {
         deliveryCost = 4;
     }
     
-    costBT = costBT + deliveryCost;
+    costBT = pizzaPrice + deliveryCost + parseFloat(tip);;
     tax = costBT * taxRate;
-    costAT = costBT + tax;
+    costAT = costBT + tax
 
+    localStorage.setItem(`pizzaPrice`, pizzaPrice.toFixed(2));
     localStorage.setItem(`costBT`, costBT.toFixed(2));
     localStorage.setItem(`deliveryCost`, deliveryCost.toFixed(2));
     localStorage.setItem(`costAT`, costAT.toFixed(2));
     localStorage.setItem(`tax`, tax.toFixed(2));
 }
 
+// This function is called when the body of the confimation page is loaded and will activate the custom event.
 function loadBuild ()
  {
     document.dispatchEvent(buildOrderConf);
  }
 
+ // This function fills out the p elements in on the order confimation page with the user provided data and is called by the custom event.
 function orderConfirmation() {
 
     document.getElementById(`nameConf`).innerText = localStorage.getItem(`nameVal`);
@@ -142,6 +150,10 @@ function orderConfirmation() {
 
     document.getElementById(`deliveryCost`).innerText = `$` + localStorage.getItem(`deliveryCost`);
 
+    document.getElementById(`pizzaPriceConf`).innerText = `$` + localStorage.getItem(`pizzaPrice`);
+
+    document.getElementById(`tipOptionConf`).innerText = `$` + localStorage.getItem(`tipOption`)
+
     document.getElementById(`costBTConf`).innerText = `$` + localStorage.getItem(`costBT`);
 
     document.getElementById(`taxConf`).innerText = `$` + localStorage.getItem(`tax`);
@@ -150,15 +162,18 @@ function orderConfirmation() {
   
 }
 
+// This function is called when the user clicks the submit order button
 function orderSubmitted () {
 
     window.location.href = `orderSubmitted.html`; 
 }
 
+// This function calculates the estimated time until the order is ready based on the cost of the order and the delivery option
 function estimatedTime () {
 
     let estimatedTime;
     let costBT = localStorage.getItem(`costBT`);
+    let tip = localStorage.getItem(`tipOption`);
     let deliveryOption = localStorage.getItem(`deliveryOption`);
 
     if (costBT >= 30)
@@ -180,6 +195,16 @@ function estimatedTime () {
     {
         estimatedTime += 20;
     }
+
+    if (parseInt(tip) < (costBT - parseInt(tip)))
+    {
+        estimatedTime -= parseInt(tip);
+    }
+    else if (parseInt(tip) > (costBT - parseInt(tip)))
+    {
+        estimatedTime -= 20;
+    }
+
 
     document.getElementById(`estimatedTime`).innerText = estimatedTime + ` Minutes`;
 }

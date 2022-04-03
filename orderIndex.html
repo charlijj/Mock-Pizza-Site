@@ -1,3 +1,4 @@
+<!-- By Jasper Charlinski -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
 
+        /* Main div container */
         .mainOrderCanvas {
 
         
@@ -18,7 +20,7 @@
 
         }
 
-        /* Div for pizza Dropbox's*/
+        /* Container for pizza select boxs*/
         .pizzaSelectContainer {
 
             display: flex;
@@ -35,7 +37,7 @@
 
         }
 
-        /* Div of Dropbox for pizza type */
+        /* Div for pizza type select-box*/
         .pizzaSelectType {
 
             display: flex;
@@ -46,7 +48,8 @@
             margin: 0 10%;
         }
 
-        /* Div of Dropbox for Size */
+
+        /* Div for pizza size select-box */
         .pizzaSelectSize {
 
             display: flex;
@@ -58,7 +61,7 @@
 
         }
 
-        /* Dropbox properties */
+        /* Select-box properties */
         .pizzaSelect {
 
             width: 200px;
@@ -69,27 +72,19 @@
             text-align: center;
         }
 
-        .pizzaSelectDelivery {
+        .pizzaSelect:hover {
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-            height: 10%;
-            width: 100%;
-
-            margin: 0px 100px;
-
-            overflow-x: hidden;
+            background-color: rgb(216, 216, 216);
         }
 
+        /* Div for delivery option radio buttons */ 
         .pizzaSelectDeliveryOption {
             text-align: center;
             margin-top: 10px;
 
         }
 
+        /* Div for all of the delivery information input */
         .deliveryInfo {
 
             width: 100%;
@@ -101,25 +96,41 @@
 
         }
 
+        /* Text-box elements inside of the deliveryInfo div */
         .deliveryInfoBox {
 
             margin: 10px 25px 0px 2px;
         }
 
+        /* Select-box elements inside of the deliveryInfo div */
         .deliveryInfoSelect {
 
             margin: 10px 25px 0px 2px;
         }
 
+        /* Div for the submit button */
         .orderNow {
 
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             
             height: 20%;
         }
+        .tipOption {
 
+
+            flex-direction: row;
+
+        }
+
+        .tipOptionInput {
+
+            margin: 5px 1px 20px 1px;
+        }
+
+        /* Properties of the submit order button */
         .orderNowButton {
 
             width: 500px;
@@ -206,11 +217,11 @@
             <span>Province:</span>
             <select name="provinceSelect" id="provinceSelect" class="deliveryInfoSelect">
                 <option value="BC">BC</option>
-                <option value="BC">AB</option>
-                <option value="BC">SK</option>
-                <option value="BC">MA</option>
-                <option value="BC">ON</option>
-                <option value="BC">QB</option>
+                <option value="NS">NS</option>
+                <option value="NB">NB</option>
+                <option value="PEI">PEI</option>
+                <option value="NL">NL</option>
+                <option value="QB">QB</option>
             </select>
             <span>City:</span>
             <input type="text" id="city" class="deliveryInfoBox">  
@@ -221,6 +232,16 @@
         <hr>
     
         <div class="orderNow">
+
+            <span>Tip Option</span>
+            <div class="tipOption">
+                <div class="tipOptionInput">
+                    <button id="giveTip" onclick="tipLocked()">OK</button>
+                    <input type="number" id="tip" class="tipOption" value="0.00">
+                </div>
+
+            </div>
+
             <button class="orderNowButton" id="submitOrderButton" onclick="submitOrder()">Submit Order</button>
         </div>
     </div>
@@ -231,9 +252,19 @@
             <p class="contactInfoItem">Phone: 778-779-9877</p>
             <p class="contactInfoItem">Email: <a href="mailto:TrichecoPizza@pizza.com">TrichecoPizza@pizza.com</a></p>
             <p class="contactInfoItem">Address: Imaneq 30, Nuuk 3900, Greenland</p>
+
         </div>
     </div>
 
+    <script>
+
+        function tipLocked () 
+        {
+            console.log(`click`)
+            document.getElementById(`tip`).style.borderColor = `#3aff2c`
+        }
+
+    </script>
     <script src="/script/script.js"></script>
     
 </body>
