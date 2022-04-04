@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>About</title>
     <style>
-
+        /* Container for all about elements */
         .content {
 
             display: flex;
@@ -19,6 +19,7 @@
             width: auto;
         }
 
+        /* Container for the Tricheco Pizza about paragraph*/
         .about {
 
             display: flex;
@@ -32,6 +33,7 @@
 
         }
 
+        /* Container for the image of Poppa Tricheco and image caption */
         .image {
 
             display: flex;
@@ -39,6 +41,38 @@
             align-items: center;
 
             flex-direction: column;
+        }
+
+        /* Container for all of the visit Greenland information */
+        .visitGreenLandInfo {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+          
+            width: 100%;
+            margin-top: 3%;
+            background-color: #333;
+            color: white;
+
+    
+        }
+
+        .visitGreenlandLink {
+
+            text-align: center;
+            flex-direction: row;
+            width: 97%; 
+            border: 1px solid white;
+            margin: 1% 2%;
+        }
+
+        .visitGreenlandLink a {
+
+            color: white;
         }
     </style>
 </head>
@@ -52,7 +86,7 @@
         <a href="aboutIndex.html"><div class="navbarItem">About</div></a>
     </div>
 
-    <div class="mainCanvas">
+    <div class="mainCanvas" style="height: 1200px;">
 
         <h1 class="header">About Tricheco Pizza</h1>
 
@@ -61,13 +95,27 @@
         <div class="content">
             <div class="about">  
 
-                <p> &nbsp&nbsp&nbsp&nbsp Tricheco Pizza is a family-owned business that has been around since the year 1104. The first-ever location was opened in Nuuk Greenland by great-great-great-great-great-great-great-great grand poppa Tricheco Re. Our signature pizza the Big Poppa encapsulates everything it means to be a Greenland pizza chief with a combination of 3 types of fish, 2 types of shellfish, and a garnish of seaweed. We offer delivery services and are open 24-7-364 (Closed on June 21st for National Greenland Day).
+                <p> &nbsp;&nbsp;&nbsp;&nbsp; Tricheco Pizza is a family-owned business that has been around since the year 1104. The first-ever location was opened in Nuuk Greenland by great-great-great-great-great-great-great-great grand poppa Tricheco Re. Our signature pizza the Big Poppa encapsulates everything it means to be a Greenland pizza chief with a combination of 3 types of fish, 2 types of shellfish, and a garnish of seaweed. We offer delivery services and are open 24-7-364 (Closed on June 21st for National Greenland Day).
                 <div class="image">
                     <h3 class="header">Poppa Tricheco</h3>
-                    <img src="img/poppaTricheco.jpg" alt="">
+                    <img src="img/poppaTricheco.jpg" alt="poppaTricheco" style="margin-bottom: 3%;">
                 </div>
             </div>
         </div>
+
+        <div class="visitGreenLandInfo" >
+
+            <div class="visitGreenlandLink">
+                <p>Visit Greenland Today! Click <a href="https://visitgreenland.com/" target="_blank">Here</a> For More Information</p>
+            </div>
+            <img src="img/visitGreenlandImage.jpg" alt="visitGreenlandImage" style="text-align: center; margin: 1% 0 1% 0;">
+            <div class="visitGreenlandLink">
+                <p>Click <a href="https://visitgreenland.com/events/" target="_blank">Here</a> For Upcoming Events In Greenland</p>
+            </div>
+        </div>
+
+
+
     </div>
 
     <div class="footer">

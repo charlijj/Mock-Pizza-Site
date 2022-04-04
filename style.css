@@ -1,4 +1,4 @@
-
+/* Menu item background */
 #pepperoni {
 
     background-image: url(img/pepperoni.jpg);
@@ -39,6 +39,7 @@
     background-image: url(img/bigPoppa.jpg);
     background-repeat: no-repeat;
 }
+/* ----------------------------------------------------- */
 
 
 body {
@@ -49,13 +50,18 @@ body {
     
 }
 
+/* Main background of webpage */
 .mainCanvas {
 
     background-image: url(/img/background.png);
     margin: 20px 115px;
-    height: 800px;
+    height: 75%;
+
+    overflow: hidden;
+
 }
 
+/* Header of webpage, used on text elements */
 .header {
 
     text-align: center;
@@ -63,10 +69,10 @@ body {
     
 }
 
-.lable {
+/* label for menu items, used on p elements */
+.label {
 
     text-align: center;
-    background: rgba(255, 255, 255, 0.3);
     font-weight: bold;
     width: 200px;
 }
@@ -85,6 +91,7 @@ body {
     top: 0;
 }
 
+/* Icon image for index page link */
 .navbarLogo 
 {
     display: flex;
@@ -107,7 +114,6 @@ body {
     align-items: center;
 
     height: 75px;
-    width: 75px;
 
     float: left;
     margin: 5px 50px;
@@ -140,15 +146,15 @@ body {
 /* Quick Order Options */
 /* --------------------------------------------------------------- */
 
+/* Container for quick order buttons */
 .startOrder 
 {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-
+/* Quick order delivery choice button style */
 .orderOption {
 
     display: flex;
@@ -178,6 +184,7 @@ body {
 /* Menu */
 /* --------------------------------------------------------------- */
 
+/* Main container for menu items */
 .menu {
 
     display: flex;
@@ -189,6 +196,7 @@ body {
 
 }
 
+/* Container for menu item image and order now button */
 .menuItem {
 
     display: flex;
@@ -196,7 +204,6 @@ body {
     justify-content: center;
     flex-direction: row-reverse;
     
-
     width: 200px;
     height: 150px;
     margin: 0 20px 80px 20px;
@@ -204,6 +211,7 @@ body {
     background-color: #f2f2f2;
 }
 
+/* Container that holds the menu item and label */
 .menuItemInfo {
 
     display: flex;
@@ -211,10 +219,11 @@ body {
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-
-    margin: 0;
+    
+    margin: 0 1%;
 }
 
+/* Order now button of menu item style */
 .menuItemOrder {
 
     display: flex;
@@ -237,11 +246,15 @@ body {
 }
 /* --------------------------------------------------------------- */
 
-
+/* Container for index page banner */
 .banner {
 
     text-align: center;
 }
+
+
+/* Footer */
+/* --------------------------------------------------------------- */
 
 .footer {
 
@@ -250,6 +263,7 @@ body {
 
 }
 
+/* Container for all of the contact information */
 .contactInfo {
 
     display: flex;
@@ -258,6 +272,7 @@ body {
 
 }
 
+/* Contact information element style */
 .contactInfoItem {
 
     margin: 30px 5%;
@@ -267,10 +282,12 @@ body {
 
     color: white;
 }
+
 .footer a:visited {
 
     color: white;
 }
 
+/* --------------------------------------------------------------- */
 
 
